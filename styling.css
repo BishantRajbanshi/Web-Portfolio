@@ -436,3 +436,8 @@ footer p {
   cursor: pointer;
   margin-left: 30px;
 }
+
+#dark-mode{
+  width: 30px;
+  cursor: pointer;
+}
