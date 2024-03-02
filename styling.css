@@ -430,3 +430,9 @@ footer {
 footer p {
   text-align: center;
 }
+
+#dark-mode{
+  width: 30px;
+  cursor: pointer;
+  margin-left: 30px;
+}
