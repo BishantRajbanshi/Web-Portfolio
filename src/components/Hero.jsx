@@ -4,19 +4,19 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Hero = () => {
   return (
-    <section className="pt-24 md:pt-32 px-6 min-h-screen flex items-center" id="home">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+    <section className="min-h-screen flex items-center justify-center px-6 py-24" id="home">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="md:w-1/2 text-center md:text-left"
+          className="text-center md:text-left"
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
             Hello, I'm{' '}
-            <span className="text-primary">Bishant Rajbanshi</span>
+            <span className="text-gradient">Bishant Rajbanshi</span>
           </h1>
-          <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6">
+          <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
             <TypeAnimation
               sequence={[
                 'Software Developer',
@@ -29,35 +29,35 @@ const Hero = () => {
               repeat={Infinity}
             />
           </div>
-          <div className="flex justify-center md:justify-start space-x-4 mb-8">
+          <div className="flex justify-center md:justify-start space-x-6 mb-8">
             <a
               href="https://github.com/BishantRajbanshi"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-300 hover:text-primary"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary hover-effect"
             >
-              <FaGithub size={24} />
+              <FaGithub size={28} />
             </a>
             <a
               href="https://www.linkedin.com/in/bishantrajbanshi/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-300 hover:text-primary"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary hover-effect"
             >
-              <FaLinkedin size={24} />
+              <FaLinkedin size={28} />
             </a>
           </div>
           <div className="flex justify-center md:justify-start space-x-4">
             <a
               href="/Images/resume-example.pdf"
               download
-              className="bg-primary text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors"
+              className="glass-effect text-gray-800 dark:text-white px-8 py-3 rounded-full hover-effect"
             >
               Download CV
             </a>
             <a
               href="#contact"
-              className="border-2 border-primary text-primary dark:text-white px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-colors"
+              className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-3 rounded-full hover-effect"
             >
               Contact Me
             </a>
@@ -67,13 +67,16 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="md:w-1/2 mt-8 md:mt-0"
+          className="relative"
         >
-          <img
-            src="/Images/me.jpg"
-            alt="Bishant Rajbanshi"
-            className="w-64 h-64 md:w-96 md:h-96 rounded-full object-cover mx-auto"
-          />
+          <div className="w-72 h-72 md:w-96 md:h-96 mx-auto relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full animate-gradient"></div>
+            <img
+              src="/Images/me.jpg"
+              alt="Bishant Rajbanshi"
+              className="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] rounded-full object-cover"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
