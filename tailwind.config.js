@@ -10,6 +10,11 @@ export default {
       colors: {
         primary: '#6366f1',
         secondary: '#8b5cf6',
+        dark: {
+          100: '#1e293b',
+          200: '#0f172a',
+          300: '#020617'
+        }
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],

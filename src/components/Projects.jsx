@@ -49,7 +49,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass-effect rounded-2xl overflow-hidden hover-effect"
+              className="bg-white dark:bg-dark-100 rounded-2xl overflow-hidden hover-effect shadow-lg"
             >
               <div className="relative h-48 overflow-hidden">
                 <img 
@@ -70,7 +70,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-gray-800 text-white text-center py-2 rounded-full hover:bg-gray-700 transition-colors"
+                    className="flex-1 bg-dark-200 dark:bg-dark-300 text-white text-center py-2 rounded-full hover:bg-dark-100 dark:hover:bg-dark-200 transition-colors"
                   >
                     GitHub
                   </a>

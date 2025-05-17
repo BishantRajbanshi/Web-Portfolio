@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600;
+  @apply bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent dark:from-primary/90 dark:to-purple-400;
 }
 
 .animate-slide-in {
