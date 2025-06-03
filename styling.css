@@ -2,6 +2,28 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+:root {
+  /* Light theme variables */
+  --bg-color: #ffffff;
+  --text-color: rgb(85, 85, 85);
+  --primary-color: #0084ff;
+  --border-color: rgb(163, 163, 163);
+  --card-bg: rgb(250, 250, 250);
+  --nav-bg: #ffffff;
+  --modal-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  /* Dark theme variables */
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --primary-color: #4dabff;
+  --border-color: #404040;
+  --card-bg: #2d2d2d;
+  --nav-bg: #1a1a1a;
+  --modal-bg: #2d2d2d;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +31,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -16,7 +41,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--text-color);
 }
 
 /* TRANSITION */
@@ -37,6 +62,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  background-color: var(--nav-bg);
 }
 
 .nav-links {
@@ -46,7 +72,7 @@ nav {
 }
 
 a {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   text-decoration-color: white;
 }
@@ -89,7 +115,7 @@ a:hover {
 .hamburger-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: var(--text-color);
   transition: all 0.3 ease-in-out;
 }
 
@@ -97,7 +123,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: var(--nav-bg);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -296,10 +322,10 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--card-bg);
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: var(--border-color) 0.1rem solid;
+  border-color: var(--border-color);
   text-align: center;
 }
 
@@ -359,8 +385,8 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: var(--border-color);
+  background: var(--card-bg);
 }
 
 .project-img {
@@ -392,9 +418,9 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: var(--border-color) 0.1rem solid;
+  border-color: var(--border-color);
+  background: var(--card-bg);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -434,11 +460,11 @@ footer p {
   width: 30px;
   cursor: pointer;
   margin-left: 30px;
+  transition: transform 0.3s ease;
 }
 
-#dark-mode{
-  width: 30px;
-  cursor: pointer;
+#dark-mode:hover {
+  transform: rotate(30deg);
 }
 
 /* Chat Widget Styles */
@@ -481,7 +507,7 @@ footer p {
   right: 20px;
   width: 380px;
   height: 600px;
-  background-color: white;
+  background-color: var(--modal-bg);
   border-radius: 12px;
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
   z-index: 1000;
@@ -503,7 +529,7 @@ footer p {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: #0084ff;
+  background-color: var(--primary-color);
   color: white;
 }
 

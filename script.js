@@ -23,3 +23,36 @@ document.addEventListener('click', function(event) {
     modal.classList.remove('active');
   }
 });
+
+// Theme switching functionality
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  
+  // Update moon icon
+  const moonIcon = document.getElementById('dark-mode');
+  if (theme === 'dark') {
+    moonIcon.src = './Images/sun.png';
+  } else {
+    moonIcon.src = './Images/moon.png';
+  }
+}
+
+// Initialize theme
+function initializeTheme() {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  setTheme(savedTheme);
+}
+
+// Toggle theme
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  setTheme(newTheme);
+}
+
+// Add click event listener to moon icon
+document.getElementById('dark-mode').addEventListener('click', toggleTheme);
+
+// Initialize theme when page loads
+document.addEventListener('DOMContentLoaded', initializeTheme);
