@@ -428,12 +428,12 @@ article .icon {
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: var(--title-color);
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: var(--text-color);
+  border-color: var(--border-color);
 }
 
 /* CONTACT */
