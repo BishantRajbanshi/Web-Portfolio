@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Remove .html extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Redirect /weather-app to weather-app.html
+RewriteRule ^weather-app/?$ weather-app.html [NC,L]
+
+# Redirect /weather-app/ to weather-app.html
+RewriteRule ^weather-app/$ weather-app.html [NC,L]

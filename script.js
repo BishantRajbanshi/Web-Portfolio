@@ -58,5 +58,5 @@ document.getElementById('dark-mode').addEventListener('click', toggleTheme);
 document.addEventListener('DOMContentLoaded', initializeTheme);
 
 function openWeatherApp() {
-  window.open('./project/WeatherApp/BishantRajbanshiID-2418795.html', '_blank', 'width=800,height=600,scrollbars=yes,resizable=yes');
+  window.location.href = './weather-app.html';
 }
